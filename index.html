@@ -246,6 +246,87 @@ border-radius:10px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
+
+/* ===== PAGE LOAD ANIMATION ===== */
+
+.hero-text{
+animation: slideLeft 1.5s ease forwards;
+opacity:0;
+}
+
+.hero-img{
+animation: slideRight 1.5s ease forwards;
+opacity:0;
+}
+
+.navbar{
+animation: slideDown 1s ease forwards;
+opacity:0;
+}
+
+.social{
+animation: slideUp 1.5s ease forwards;
+opacity:0;
+}
+
+/* KEYFRAMES */
+
+@keyframes slideLeft{
+
+from{
+transform:translateX(-200px);
+opacity:0;
+}
+
+to{
+transform:translateX(0);
+opacity:1;
+}
+
+}
+
+@keyframes slideRight{
+
+from{
+transform:translateX(200px);
+opacity:0;
+}
+
+to{
+transform:translateX(0);
+opacity:1;
+}
+
+}
+
+@keyframes slideDown{
+
+from{
+transform:translateY(-100px);
+opacity:0;
+}
+
+to{
+transform:translateY(0);
+opacity:1;
+}
+
+}
+
+@keyframes slideUp{
+
+from{
+transform:translateY(100px);
+opacity:0;
+}
+
+to{
+transform:translateY(0);
+opacity:1;
+}
+
+}
+
 </style>
 
 </head>
