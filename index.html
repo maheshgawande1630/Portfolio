@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Custom cursor dot (desktop only, CSS hides it on touch) -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
     <div class="scroll-progress" aria-hidden="true"><span></span></div>
     
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" aria-label="Main navigation">
@@ -47,38 +51,48 @@
 
     <main>
         <section id="home" class="hero-section d-flex align-items-center">
+            <!-- ambient floating shapes for depth -->
+            <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+            <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
             <div class="container">
                 <div class="row align-items-center gy-5 flex-column-reverse flex-lg-row">
-                    <div class="col-lg-7 fade-in-up">
-                        <div class="availability-pill"><span></span> Open to opportunities</div>
-                        <p class="hero-kicker">B.Tech CSE (AI & ML) Student · Building for the web</p>
-                        <h1 class="hero-title">I turn ideas into <span>useful digital products.</span></h1>
-                        <p class="hero-description">
-                            I'm Mahesh Gawande, focused on learning modern web development while strengthening my programming fundamentals through projects and Data Structures & Algorithms.
-                        </p>
-                        <div class="hero-actions d-flex gap-3 flex-wrap">
-                            <a href="#projects" class="btn custom-btn custom-btn-primary">
-                                View my work <i class="fa-solid fa-arrow-down"></i>
-                            </a>
-                            <a href="#contact" class="btn custom-btn">
-                                Get in touch <i class="fa-solid fa-paper-plane"></i>
-                            </a>
-                        </div>
-                        <div class="hero-meta">
-                            <div><strong>Web Dev</strong><span>HTML, CSS, JS</span></div>
-                            <div><strong>Languages</strong><span>Python, C</span></div>
-                            <div><strong>Core</strong><span>DSA, AI & ML</span></div>
+                    <div class="col-lg-7">
+                        <div class="hero-anim">
+                            <div class="availability-pill"><span></span> Open to opportunities</div>
+                            <p class="hero-kicker">B.Tech CSE (AI & ML) Student · Building for the web</p>
+                            <h1 class="hero-title">
+                                <span class="line-mask"><span class="line-inner" style="color: white;">I turn ideas into</span></span>
+                                <span class="line-mask"><span class="line-inner accent-text">useful digital products.</span></span>
+                            </h1>
+                            <p class="hero-description">
+                                I'm Mahesh Gawande, focused on learning modern web development while strengthening my programming fundamentals through projects and Data Structures & Algorithms.
+                            </p>
+                            <div class="hero-actions d-flex gap-3 flex-wrap">
+                                <a href="#projects" class="btn custom-btn custom-btn-primary magnetic">
+                                    <span class="btn-label">View my work <i class="fa-solid fa-arrow-down"></i></span>
+                                </a>
+                                <a href="#contact" class="btn custom-btn magnetic">
+                                    <span class="btn-label">Get in touch <i class="fa-solid fa-paper-plane"></i></span>
+                                </a>
+                            </div>
+                            <div class="hero-meta">
+                                <div><strong>Web Dev</strong><span>HTML, CSS, JS</span></div>
+                                <div><strong>Languages</strong><span>Python, C</span></div>
+                                <div><strong>Core</strong><span>DSA, AI & ML</span></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-5 fade-in-up">
-                        <div class="hero-portrait-wrapper">
+                    <div class="col-lg-5">
+                        <div class="hero-portrait-wrapper reveal reveal-right">
                             <div class="portrait-frame">
                                 <span class="frame-num">01</span>
                                 <span class="frame-label">DEVELOPER PORTRAIT</span>
                             </div>
-                            <div class="portrait-image-container">
+                            <div class="portrait-image-container tilt-target">
+                                <div class="portrait-shine" aria-hidden="true"></div>
                                 <img src="assets/myphoto.png" alt="Mahesh Gawande" class="hero-portrait">
-                                <a href="https://github.com/maheshgawande1630" target="_blank" rel="noopener noreferrer" class="github-badge">
+                                <a href="https://github.com/maheshgawande1630" target="_blank" rel="noopener noreferrer" class="github-badge magnetic">
                                     <i class="fa-brands fa-github"></i>
                                     <div>
                                         <strong>Explore my code</strong>
@@ -90,19 +104,20 @@
                     </div>
                 </div>
             </div>
+            <a href="#about" class="scroll-cue" aria-hidden="true"><span></span></a>
         </section>
 
         <section id="about" class="about-section py-5 section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <p class="section-kicker">About Me</p>
-                        <h2 class="section-title">A passionate learner dedicated to software engineering.</h2>
+                        <p class="section-kicker reveal">About Me</p>
+                        <h2 class="section-title reveal">A passionate learner dedicated to software engineering.</h2>
                     </div>
                     <div class="col-lg-6">
                         <div class="about-text">
-                            <p>I'm a Second-year B.Tech CSE (AI & ML) student with a strong interest in software development. My goal is to become a software engineer with expertise in full-stack development and AI/ML.</p>
-                            <p>Currently, I'm mastering HTML, CSS, JavaScript, and Data Structures & Algorithms while building projects to strengthen my practical skills.</p>
+                            <p class="reveal">I'm a Second-year B.Tech CSE (AI & ML) student with a strong interest in software development. My goal is to become a software engineer with expertise in full-stack development and AI/ML.</p>
+                            <p class="reveal">Currently, I'm mastering HTML, CSS, JavaScript, and Data Structures & Algorithms while building projects to strengthen my practical skills.</p>
                         </div>
                     </div>
                 </div>
@@ -111,12 +126,12 @@
 
         <section id="skills" class="skills-section bg-alt py-5 section-padding">
             <div class="container">
-                <p class="section-kicker">Expertise</p>
-                <h2 class="section-title mb-5">Skills & Tools</h2>
+                <p class="section-kicker reveal">Expertise</p>
+                <h2 class="section-title mb-5 reveal">Skills & Tools</h2>
                 
-                <div class="row g-4">
+                <div class="row g-4 reveal-stagger">
                     <div class="col-md-4">
-                        <div class="skill-card">
+                        <div class="skill-card reveal-item tilt-card">
                             <div class="icon"><i class="fa-solid fa-code"></i></div>
                             <h4>Languages</h4>
                             <p>Programming languages I use to build solutions.</p>
@@ -130,7 +145,7 @@
                     </div>
                     
                     <div class="col-md-4">
-                        <div class="skill-card">
+                        <div class="skill-card reveal-item tilt-card">
                             <div class="icon"><i class="fa-solid fa-brain"></i></div>
                             <h4>Computer Science</h4>
                             <p>Core fundamentals and problem-solving concepts.</p>
@@ -144,7 +159,7 @@
                     </div>
                     
                     <div class="col-md-4">
-                        <div class="skill-card">
+                        <div class="skill-card reveal-item tilt-card">
                             <div class="icon"><i class="fa-solid fa-toolbox"></i></div>
                             <h4>Tools</h4>
                             <p>Technologies I use to manage and deploy code.</p>
@@ -161,13 +176,13 @@
 
         <section id="projects" class="projects-section py-5 section-padding">
             <div class="container">
-                <p class="section-kicker">Portfolio</p>
-                <h2 class="section-title mb-5">Featured Projects</h2>
+                <p class="section-kicker reveal">Portfolio</p>
+                <h2 class="section-title mb-5 reveal">Featured Projects</h2>
                 
-                <div class="row g-4">
+                <div class="row g-4 reveal-stagger">
                     <!-- Project 1 -->
                     <div class="col-lg-6">
-                        <div class="project-card">
+                        <div class="project-card reveal-item tilt-card">
                             <div class="project-content">
                                 <p class="project-type">Web Development</p>
                                 <h3>Personal Portfolio Website</h3>
@@ -187,7 +202,7 @@
 
                     <!-- Project 2 -->
                     <div class="col-lg-6">
-                        <div class="project-card">
+                        <div class="project-card reveal-item tilt-card">
                             <div class="project-content">
                                 <p class="project-type">Coming Soon</p>
                                 <h3>More Projects</h3>
@@ -206,22 +221,23 @@
 
         <section id="education" class="education-section bg-alt py-5 section-padding">
             <div class="container">
-                <p class="section-kicker">Background</p>
-                <h2 class="section-title mb-5">Education</h2>
+                <p class="section-kicker reveal">Background</p>
+                <h2 class="section-title mb-5 reveal">Education</h2>
                 
                 <div class="timeline">
+                    <div class="timeline-fill" aria-hidden="true"></div>
                     <!-- Item 1 -->
-                    <div class="timeline-item">
+                    <div class="timeline-item reveal reveal-left">
                         <div class="timeline-date">2026 – Present</div>
                         <div class="timeline-content">
                             <h3>B.Tech CSE (AI & ML)</h3>
                             <p class="institution">D. Y. Patil College of Engineering & Technology, Kolhapur (Shivaji University)</p>
-                            <p class="grade">CGPA: 9.05 (First Year)</p>
+                            <span class="score">CGPA: 9.05 (First Year)</span>
                         </div>
                     </div>
                     
                     <!-- Item 2 -->
-                    <div class="timeline-item">
+                    <div class="timeline-item reveal reveal-left">
                         <div class="timeline-date">2025</div>
                         <div class="timeline-content">
                             <h3>Higher Secondary (CBSE)</h3>
@@ -231,7 +247,7 @@
                     </div>
                     
                     <!-- Item 3 -->
-                    <div class="timeline-item">
+                    <div class="timeline-item reveal reveal-left">
                         <div class="timeline-date">2023</div>
                         <div class="timeline-content">
                             <h3>Secondary Education</h3>
@@ -245,18 +261,18 @@
 
         <section id="contact" class="contact-section py-5 section-padding">
             <div class="container text-center">
-                <p class="section-kicker">Get In Touch</p>
-                <h2 class="hero-title mb-4">Let's work <span>together.</span></h2>
-                <p class="hero-description mx-auto mb-5">Feel free to reach out for collaborations or just a friendly hello!</p>
+                <p class="section-kicker reveal">Get In Touch</p>
+                <h2 class="hero-title mb-4 reveal">Let's work <span>together.</span></h2>
+                <p class="hero-description mx-auto mb-5 reveal">Feel free to reach out for collaborations or just a friendly hello!</p>
                 
-                <div class="contact-details d-flex justify-content-center gap-4 flex-wrap mb-5">
+                <div class="contact-details d-flex justify-content-center gap-4 flex-wrap mb-5 reveal">
                     <a href="mailto:maheshgawande681@gmail.com" class="contact-link"><i class="fa-solid fa-envelope"></i> maheshgawande681@gmail.com</a>
                     <a href="tel:8999144199" class="contact-link"><i class="fa-solid fa-phone"></i> 8999144199</a>
                 </div>
                 
-                <div class="social-links d-flex justify-content-center gap-3">
-                    <a href="https://linkedin.com/in/mahesh-gawande-583196369" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/maheshgawande1630" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i></a>
+                <div class="social-links d-flex justify-content-center gap-3 reveal">
+                    <a href="https://linkedin.com/in/mahesh-gawande-583196369" target="_blank" class="social-btn magnetic"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/maheshgawande1630" target="_blank" class="social-btn magnetic"><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
         </section>
